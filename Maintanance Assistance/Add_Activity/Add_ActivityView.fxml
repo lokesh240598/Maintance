@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="200.0" minWidth="570.0" prefHeight="275.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Add_Activity.Add_ActivityViewController">
+   <children>
+      <Button layoutX="82.0" layoutY="200.0" mnemonicParsing="false" onAction="#doAddNewActivity" prefHeight="25.0" prefWidth="112.0" text="ADD ACTIVITY" />
+      <Button layoutX="358.0" layoutY="200.0" mnemonicParsing="false" onAction="#doNew" prefHeight="25.0" prefWidth="168.0" text="ADD NEW MACHINE TYPE" />
+      <Label layoutX="173.0" layoutY="240.0" text="STATUS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtActivity" layoutX="280.0" layoutY="88.0" prefHeight="25.0" prefWidth="233.0" promptText="Activity" />
+      <TextField fx:id="txtFrequency" layoutX="410.0" layoutY="130.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="txtTolerance" layoutX="410.0" layoutY="158.0" prefHeight="25.0" prefWidth="63.0" />
+      <Label layoutX="159.0" layoutY="64.0" text="MACHINE TYPE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="367.0" layoutY="64.0" text="ACTIVITY">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="134.0" text="FREQUENCY">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="162.0" text="TOLERANCE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtActivityID" layoutX="56.0" layoutY="88.0" prefHeight="25.0" prefWidth="63.0" promptText="ID" />
+      <Label layoutX="56.0" layoutY="64.0" text="ACTIVITY ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="9.0" prefHeight="39.0" prefWidth="570.0" style="-fx-background-color: #66b3ff;" text="ADD MAINTANCE ACTIVITY" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="FrequencyDay" layoutX="112.0" layoutY="133.0" mnemonicParsing="false" text="DAY">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Frequency" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="FrequencyMonth" layoutX="171.0" layoutY="134.0" mnemonicParsing="false" text="MONTH" toggleGroup="$Frequency">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="FrequencyYear" layoutX="250.0" layoutY="134.0" mnemonicParsing="false" text="YEAR" toggleGroup="$Frequency">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="ToleranceDay" layoutX="112.0" layoutY="161.0" mnemonicParsing="false" text="DAY">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Tolerance" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="ToleranceMonth" layoutX="171.0" layoutY="161.0" mnemonicParsing="false" text="MONTH" toggleGroup="$Tolerance">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="ToleranceYear" layoutX="251.0" layoutY="161.0" mnemonicParsing="false" text="YEAR" toggleGroup="$Tolerance">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <Label fx:id="lblStatus2" layoutX="239.0" layoutY="240.0" prefHeight="17.0" prefWidth="196.0" textFill="#c91919">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <ComboBox fx:id="comboMachineType" editable="true" layoutX="133.0" layoutY="88.0" prefHeight="25.0" prefWidth="134.0" promptText="Type" />
+      <Button layoutX="217.0" layoutY="200.0" mnemonicParsing="false" onAction="#doNewActivity" text="ADD NEW ACTVITY" />
+   </children>
+</AnchorPane>

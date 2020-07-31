@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="683.0" minWidth="863.0" prefHeight="683.0" prefWidth="863.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Report.ReportViewController">
+   <children>
+      <Label alignment="CENTER" layoutX="-3.0" layoutY="11.0" prefHeight="48.0" prefWidth="863.0" style="-fx-background-color: #66b3ff;" text="REPORT GENERATION" textFill="#f5f2f2">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" editable="true" layoutX="18.0" layoutY="318.0" prefHeight="287.0" prefWidth="804.0" />
+      <Separator layoutX="20.0" layoutY="294.0" prefHeight="11.0" prefWidth="804.0">
+         <effect>
+            <Blend />
+         </effect>
+      </Separator>
+      <RadioButton fx:id="rbMachineType" layoutX="93.0" layoutY="147.0" mnemonicParsing="false" text="BY MACHINE TYPE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Option" />
+         </toggleGroup>
+      </RadioButton>
+      <Button layoutX="192.0" layoutY="201.0" mnemonicParsing="false" onAction="#doSearch" text="SEARCH" />
+      <ComboBox fx:id="comboMachineType1" editable="true" layoutX="236.0" layoutY="143.0" prefHeight="25.0" prefWidth="171.0" />
+      <Button layoutX="375.0" layoutY="605.0" mnemonicParsing="false" onAction="#doExport" text="EXPORT" />
+      <Label layoutX="302.0" layoutY="644.0" prefHeight="17.0" prefWidth="49.0" text="STATUS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="lblResult" layoutX="361.0" layoutY="644.0" prefHeight="17.0" prefWidth="182.0" textFill="#e41212">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <DatePicker fx:id="toDate" layoutX="437.0" layoutY="69.0" prefHeight="25.0" prefWidth="144.0" promptText="To" />
+      <DatePicker fx:id="fromDate" layoutX="263.0" layoutY="69.0" prefHeight="25.0" prefWidth="144.0" promptText="From" />
+      <RadioButton fx:id="rbMachineID" layoutX="93.0" layoutY="114.0" mnemonicParsing="false" text="BY MACHINE ID" toggleGroup="$Option">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="lblMachineID" layoutX="236.0" layoutY="110.0" prefHeight="25.0" prefWidth="171.0" promptText="Machine ID" />
+      <RadioButton fx:id="rbMachineType1" layoutX="469.0" layoutY="114.0" mnemonicParsing="false" text="BY ACTIVITY" toggleGroup="$Option">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <ComboBox fx:id="comboMachineType2" editable="true" layoutX="586.0" layoutY="110.0" prefHeight="25.0" prefWidth="171.0" />
+      <Button layoutX="274.0" layoutY="201.0" mnemonicParsing="false" onAction="#doClear" prefHeight="25.0" prefWidth="60.0" text="CLEAR" />
+      <TableView fx:id="actTable" editable="true" layoutX="472.0" layoutY="143.0" onMouseClicked="#doShowData" prefHeight="141.0" prefWidth="348.0" />
+      <Button layoutX="779.0" layoutY="110.0" mnemonicParsing="false" onAction="#doSelect" prefHeight="25.0" prefWidth="42.0" text="GO" />
+   </children>
+</AnchorPane>

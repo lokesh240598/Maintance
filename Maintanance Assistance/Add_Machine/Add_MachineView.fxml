@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="200.0" minWidth="600.0" prefHeight="520.0" prefWidth="663.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Add_Machine.Add_MachineViewController">
+   <children>
+      <Button layoutX="141.0" layoutY="428.0" mnemonicParsing="false" onAction="#doAddNewActivity" prefHeight="25.0" prefWidth="182.0" text="LINK MACHINE WITH ACTIVITY" />
+      <TextField fx:id="txtMachineID" layoutX="89.0" layoutY="95.0" prefHeight="25.0" prefWidth="98.0" promptText="Machine ID" />
+      <TextField fx:id="txtMachineModel" layoutX="211.0" layoutY="95.0" prefHeight="25.0" prefWidth="123.0" promptText="Machine Model" />
+      <Label layoutX="100.0" layoutY="71.0" text="MACHIINE ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="223.0" layoutY="71.0" text="MACHINE MODEL">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="372.0" layoutY="71.0" text="MACHINE TYPE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="521.0" layoutY="71.0" text="UNIT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="219.0" layoutY="471.0" text="STATUS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <HBox layoutX="1.0" layoutY="9.0" prefHeight="48.0" prefWidth="663.0" style="-fx-background-color: #66b3ff;">
+         <children>
+            <Label alignment="CENTER" prefHeight="48.0" prefWidth="662.0" text="ADD NEW MACHINE" textFill="#f5f2f2">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="lblStatus1" layoutX="262.0" layoutY="587.0" prefHeight="17.0" prefWidth="192.0" textFill="#d31616">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="MaintanceDate" layoutX="500.0" layoutY="383.0" prefHeight="25.0" prefWidth="123.0" />
+      <Label layoutX="508.0" layoutY="362.0" text="MAINTANCE DATE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Separator layoutY="497.0" prefHeight="3.0" prefWidth="663.0" />
+      <Separator layoutY="507.0" prefHeight="3.0" prefWidth="663.0" />
+      <TextField fx:id="txtUnit" layoutX="502.0" layoutY="95.0" prefHeight="25.0" prefWidth="68.0" promptText="Unit" />
+      <TableView fx:id="table" editable="true" layoutX="22.0" layoutY="172.0" onMouseClicked="#doShowData" prefHeight="173.0" prefWidth="614.0" />
+      <TextField fx:id="txtActivity" layoutX="137.0" layoutY="384.0" prefHeight="25.0" prefWidth="182.0" promptText="Activity" />
+      <Label layoutX="201.0" layoutY="360.0" text="ACTIVITY">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtActivityID" layoutX="41.0" layoutY="384.0" prefHeight="25.0" prefWidth="77.0" promptText="ID" />
+      <Label layoutX="45.0" layoutY="360.0" text="ACTIVITY ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="366.0" layoutY="428.0" mnemonicParsing="false" onAction="#doNew" prefHeight="25.0" prefWidth="159.0" text="ADD NEW MACHINE" />
+      <ComboBox fx:id="comboMachineType" editable="true" layoutX="348.0" layoutY="95.0" prefHeight="25.0" prefWidth="137.0" />
+      <Button layoutX="261.0" layoutY="136.0" mnemonicParsing="false" onAction="#doSelect" prefHeight="25.0" prefWidth="137.0" text="SELECT ACTIVITIES" />
+      <TextField fx:id="txtFrequency" layoutX="334.0" layoutY="383.0" prefHeight="25.0" prefWidth="63.0" />
+      <TextField fx:id="txtTolerance" layoutX="418.0" layoutY="383.0" prefHeight="25.0" prefWidth="63.0" />
+      <Label layoutX="331.0" layoutY="361.0" text="FREQUENCY">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="416.0" layoutY="362.0" text="TOLERANCE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStatus1" layoutX="281.0" layoutY="470.0" prefHeight="17.0" prefWidth="182.0" textFill="#f20808">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
